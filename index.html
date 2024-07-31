@@ -4,9 +4,10 @@
         <title></title>
     </head>
     <body>
-        <img src="images/1-02.png" style="margin-left: auto;margin-right: auto;display: block;"></img>
+        <img id="main" src="images/1-02.png" style="margin-left: auto;margin-right: auto;display: block;"></img>
         <script>
             alert(window.innerHeight);
+            $("#main").css("height",((window.innerHeight*0.75)+"px"));
         </script>
     </body>
 </html>
