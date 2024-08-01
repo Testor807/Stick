@@ -4,12 +4,23 @@
         <title></title>
     </head>
     <body>
+        <img id="img" src="images/Sticker1/A1 (1).png" style="position: absolute;height: 91px;transform: rotate(-2deg);">
         <img id="main" src="images/1-02.png" style="margin-left: auto;margin-right: auto;display: block;"></img>
         <script>
             //alert(window.innerHeight);
             let h = window.innerHeight*0.75;
             document.getElementById("main").style.height = h+"px";
-            alert("new:"+h);
+            //alert("new:"+h);
+            let rect = document.getElementById("main").getBoundingClientRect();
+            //alert("X:"+rect.x);
+            //alert("Y:"+rect.y);
+            item = document.getElementById("img");
+            item.style.top = (rect.y+400)+"px";
+            item.style.left = window.innerWidth*0.5+"px";
+
+            window.onresize=function(){
+                item.style.left = (window.innerWidth*0.5-8)+"px";
+            }
         </script>
     </body>
 </html>
